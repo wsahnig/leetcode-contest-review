@@ -3,6 +3,8 @@ package 第266场周赛;
 import java.util.Arrays;
 
 /**
+ * https://leetcode.cn/problems/count-vowel-substrings-of-a-string/
+ * 
  * 统计字符串中的元音子字符串（简单）
  * 
  * 子字符串 是字符串中的一个连续（非空）的字符序列。
