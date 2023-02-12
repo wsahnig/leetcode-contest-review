@@ -3,8 +3,9 @@ package 第268场周赛;
 import java.util.List;
 
 class BinarySearch {
+    public static final int INVALID_INDEX= -1;
     /**
-     * 查找小于等于key的最大值索引
+     * 查找有序数组中小于等于key的最大值索引
      * @param arr
      * @param key
      * @return
@@ -23,7 +24,7 @@ class BinarySearch {
     }
 
     /**
-     * 查找大于等于key的最小值索引
+     * 查找有序数组中大于等于key的最小值索引
      * @param arr
      * @param key
      * @return
@@ -38,7 +39,7 @@ class BinarySearch {
                 left = mid + 1;
             }
         }
-        return left;
+        return left == arr.length ? INVALID_INDEX : left;
     }
 
     /**
