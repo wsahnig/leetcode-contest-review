@@ -28,6 +28,9 @@ class BinarySearch {
      * @param arr
      * @param key
      * @return
+     * 
+     * arr[mid] >= key只是一个判断条件， 它可以替换为任何boolean类型表达式，如大于key的最小值。
+     * 上面的函数，满足“条件”的最大索引同理。
      */
     public int searchLeftBound(int[] arr, int key) {
         int left = 0, right = arr.length;
