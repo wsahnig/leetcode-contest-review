@@ -3,15 +3,17 @@ package 第268场周赛;
 import java.util.List;
 
 class BinarySearch {
-    public static final int INVALID_INDEX= -1;
+    public static final int INVALID_INDEX = -1;
+
     /**
      * 查找有序数组中小于等于key的最大值索引
+     * 
      * @param arr
      * @param key
      * @return
      */
     public int searchRightBound(int[] arr, int key) {
-        int left = 0, right = arr.length;
+        int left = 0, right = arr.length - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
             if (arr[mid] <= key) {
@@ -25,15 +27,16 @@ class BinarySearch {
 
     /**
      * 查找有序数组中大于等于key的最小值索引
+     * 
      * @param arr
      * @param key
      * @return
      * 
-     * arr[mid] >= key只是一个判断条件， 它可以替换为任何boolean类型表达式，如大于key的最小值。
-     * 上面的函数，满足“条件”的最大索引同理。
+     *         arr[mid] >= key只是一个判断条件， 它可以替换为任何boolean类型表达式，如大于key的最小值。
+     *         上面的函数，满足“条件”的最大索引同理。
      */
     public int searchLeftBound(int[] arr, int key) {
-        int left = 0, right = arr.length;
+        int left = 0, right = arr.length - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
             if (arr[mid] >= key) {
@@ -52,14 +55,14 @@ class BinarySearch {
      * @param key
      * @return
      * 
-     * 使用举例：
-     * int s = binarySearch(list, left);
-     * int e = binarySearch(list, right);
+     *         使用举例：
+     *         int s = binarySearch(list, left);
+     *         int e = binarySearch(list, right);
      *
-     * if (s < 0)
-     * s = -s - 1; // 大于left的最小值索引
-     * if (e < 0)
-     * e = -e - 2; // 小于right的最大值索引
+     *         if (s < 0)
+     *         s = -s - 1; // 大于left的最小值索引
+     *         if (e < 0)
+     *         e = -e - 2; // 小于right的最大值索引
      */
     public int binarySearch(List<Integer> list, int key) {
         int low = 0;
