@@ -11,7 +11,7 @@ class BinarySearch {
      * @return
      */
     public int searchRightBound(int[] arr, int key) {
-        int left = 0, right = arr.length;
+        int left = 0, right = arr.length-1;
         while (left <= right) {
             int mid = (left + right) / 2;
             if (arr[mid] <= key) {
@@ -33,7 +33,7 @@ class BinarySearch {
      * 上面的函数，满足“条件”的最大索引同理。
      */
     public int searchLeftBound(int[] arr, int key) {
-        int left = 0, right = arr.length;
+        int left = 0, right = arr.length-1;
         while (left <= right) {
             int mid = (left + right) / 2;
             if (arr[mid] >= key) {
